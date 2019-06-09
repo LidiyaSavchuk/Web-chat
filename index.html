@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyALfhk2ta_qS5D6O2Sx2ABqpkxFC2NhXnw",
+    authDomain: "fir-chat-a6417.firebaseapp.com",
+    databaseURL: "https://fir-chat-a6417.firebaseio.com",
+    projectId: "fir-chat-a6417",
+    storageBucket: "fir-chat-a6417.appspot.com",
+    messagingSenderId: "342669420955",
+    appId: "1:342669420955:web:0645ee8956390db6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width",initial-scale=1.0>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div class="chat">
+        <form id="nameForm">
+           <input type="text" id="name-input"> 
+           <button id="name-btn">Enter</button>
+        </form>;
+        <div class="chat-header">Web Chat</div>
+        <div class="chat-window" id="chat-window">
+            <ul id="messages">
+
+            </ul>
+            <form id="messageForm">
+                <input type="text" id="msg-input">
+                <button id="msg-btn">Send</button>
+            </form>
+        </div> 
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script>src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"</script>
+</body>
+</html>
