@@ -1,44 +1,64 @@
 <!DOCTYPE html>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyALfhk2ta_qS5D6O2Sx2ABqpkxFC2NhXnw",
-    authDomain: "fir-chat-a6417.firebaseapp.com",
-    databaseURL: "https://fir-chat-a6417.firebaseio.com",
-    projectId: "fir-chat-a6417",
-    storageBucket: "fir-chat-a6417.appspot.com",
-    messagingSenderId: "342669420955",
-    appId: "1:342669420955:web:0645ee8956390db6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width",initial-scale=1.0>
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <title>Firebase Whatsapp</title>
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/697DFAAE-650E-D14F-AC82-17C41D6B93E7/main.js" charset="UTF-8"></script></head>
+
 <body>
- 
+
     <div class="chat">
         <form id="nameForm">
-           <input type="text" id="name-input"> 
-           <button id="name-btn">Enter</button>
-        </form>;
-        <div class="chat-header">Web Chat</div>
+            <!-- --<input type="text" id="name-input" placeholder="Enter your name">
+            --<button id="name-btn">Enter</button> -->
+			<!-- <div id="message"></div>
+    <div id="loader">
+      <img src="loader.gif"/>
+    </div>
+    <div id="auth"></div>
+    <div id="content"></div>
+    <div id="logout" style="display: none">Выход</div>
+    <template id="user-template">
+      <div class="user-item">
+        <div class="name"></div>
+        <textarea class="message"></textarea>
+        <button class="save">Сохранить</button>
+      </div>
+    </template>
+	 -->
+	 <div id="header">
+			<div id='auth'>
+			<span id='login-name'></span>
+			<a id='login'>Войти</a>
+			<a id='logout' style='display:none'>Выйти</a>
+			</div>
+			<p class='img'><img src='/img/imgDoc.png' align='middle' height='150px'></p>
+		</div>
+		<img src="img/loader.gif" id="loader" style='display:none'>
+		<div id='message'></div>
+        </form>
+		
+        <div class="chat-header">Firebase Whatsapp</div>
         <div class="chat-window" id="chat-window">
             <ul id="messages">
 
             </ul>
             <form id="messageForm">
-                <input type="text" id="msg-input">
-                <button id="msg-btn">Send</button>
+                <input type="text" id="msg-input" placeholder="Enter a message" disabled>
+                <button id="msg-btn" disabled>Send</button>
             </form>
-        </div> 
+        </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-    <script>src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"</script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"></script>
+    <script src="app.js"></script>
+	<script src="auth.js"></script>
 </body>
+
 </html>
